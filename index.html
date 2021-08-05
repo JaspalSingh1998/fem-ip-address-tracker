@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="/dist/tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IP Address Tracker</title>
+</head>
+
+<body>
+    <div class="flex flex-col max-h-screen h-screen">
+        <!-- Header Part -->
+        <div class="flex justify-center relative z-20 bg-img bg-cover pt-10 pb-40 px-10">
+            <!-- Header Part -->
+            <div class="w-full max-w-screen-sm">
+                <h1 class="text-white text-4xl text-center pb-8">IP Address Tracker</h1>
+                <div class="flex">
+                    <input type="text" placeholder="Search for any IP address or leave empty to get your ip info"
+                        class="flex-1 p-4 rounded-tl-md rounded-bl-md focus:outline-none" id="input" />
+                    <i class="
+                    flex
+                    items-center
+                    cursor-pointer
+                    bg-black
+                    text-white
+                    px-4
+                    rounded-tr-md
+                    rounded-br-md
+                    fas fa-chevron-right" style="display: flex;" id="btn"></i>
+                </div>
+            </div>
+            <!-- Result Part -->
+            <div class="hidden flex flex-col md:flex-row absolute -bottom-64 md:-bottom-20 bg-white gap-y-4 
+    gap-x-12 
+    px-8 pt-8 
+    pb-12 
+    rounded-md" id="parent"></div>
+        </div>
+        <!-- Map Part -->
+        <div class="h-full z-10" id="mapid"></div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+
+</html>
